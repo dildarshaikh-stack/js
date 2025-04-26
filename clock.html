@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="calculator.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="clock" style="margin: 25%;margin-left:45% ; font-size: xx-large;">00:00:00</div>
+<script>
+    function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call to display the clock immediately
+</script>
+</body>
+</html><!-- DATE AND TIME IN JAVSCRIPT
+// get methods
+// method                       description
+// getDate()                   Returns the day of the month (1-31) for the specified date according to local time.
+// getfullYear()               Returns the year (4 digits for 4-digit years) of the specified date according to local time.
+// getday()                    Returns the day of the week (0-6) for the specified date according to local time.
+// getHours()                  Returns the hour (0-23) in the specified date according to local time.
+// getMilliseconds()          Returns the milliseconds (0-999) in the specified date according to local time.
+// getMinutes()               Returns the minutes (0-59) in the specified date according to local time.
+// getMonth()                 Returns the month (0-11) in the specified date according to local time.
+// getSeconds()               Returns the seconds (0-59) in the specified date according to local time.
+// getTime()                  Returns the number of milliseconds since January 1, 1970, 00:00:00 UTC for a specified date.
+// getTimezoneOffset()        Returns the difference, in minutes, between a UTC and local time for a specified date.
